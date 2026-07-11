@@ -4,7 +4,7 @@ Pay-per-call **image / video / audio** for OpenAI Codex, with a spend gate and a
 running cost meter. No API keys — every call is paid in USDC from a local wallet
 via the [BlockRun MCP](https://github.com/BlockRunAI/blockrun-mcp) (media profile).
 
-This is the **Codex port** of [`BlockRunAI/blockrun-plugin`](https://github.com/BlockRunAI/blockrun-plugin)
+This is the **Codex port** of [`BlockRunAI/blockrun-claude-plugin`](https://github.com/BlockRunAI/blockrun-claude-plugin)
 (the Claude Code plugin). The portable core — the MCP server, the spend
 estimator, the real-ledger tally, and the hook scripts — is shared verbatim; only
 the manifests and paths are Codex-shaped.
