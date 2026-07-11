@@ -1,11 +1,19 @@
 {
-  "name": "blockrun",
-  "interface": { "displayName": "BlockRun" },
+  "name": "blockrun-codex",
+  "interface": {
+    "displayName": "BlockRun (Codex)"
+  },
   "plugins": [
     {
       "name": "blockrun-media",
-      "source": { "source": "local", "path": "." },
-      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "source": {
+        "source": "local",
+        "path": "."
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
       "category": "Productivity"
     }
   ]
