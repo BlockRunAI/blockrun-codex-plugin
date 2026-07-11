@@ -1,0 +1,10 @@
+{
+  "//": "BlockRun MCP server, media profile. Codex reads the wrapped mcp_servers form. For local dev against an unpublished build, point command/args at a local node dist path.",
+  "mcp_servers": {
+    "blockrun": {
+      "command": "npx",
+      "args": ["-y", "@blockrun/mcp@latest", "--profile", "media"],
+      "env": { "BLOCKRUN_INLINE_IMAGES": "1" }
+    }
+  }
+}

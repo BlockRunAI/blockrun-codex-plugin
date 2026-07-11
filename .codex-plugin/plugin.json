@@ -1,0 +1,19 @@
+{
+  "name": "blockrun-media",
+  "version": "0.1.0",
+  "description": "BlockRun media tools (image/video/audio) with spend-confirmation and a running cost meter, ported for OpenAI Codex.",
+  "author": { "name": "BlockRun", "email": "hello@blockrun.ai", "url": "https://blockrun.ai" },
+  "homepage": "https://blockrun.ai",
+  "repository": "https://github.com/BlockRunAI/blockrun-codex-plugin",
+  "license": "MIT",
+  "keywords": ["blockrun", "media", "image", "video", "x402", "codex"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "hooks": "./hooks/hooks.json",
+  "interface": {
+    "displayName": "BlockRun Media",
+    "shortDescription": "Pay-per-call image/video/audio with a spend gate + cost meter",
+    "longDescription": "Wraps the BlockRun MCP (media profile) with a PreToolUse spend gate (estimate + confirm), a PostToolUse tally that reads the real x402 settlement ledger, and cost-insight skills. No API keys — pays per call in USDC from a local wallet.",
+    "category": "Productivity"
+  }
+}
