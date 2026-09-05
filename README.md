@@ -1,7 +1,7 @@
 # BlockRun Media — Codex plugin
 
 Pay-per-call **image / video / audio** for OpenAI Codex, with a spend gate and a
-running cost meter. No API keys — every call is paid in USDC from a local wallet
+running cost meter. Use a BlockRun account API key or pay each call in USDC from a local wallet
 via the [BlockRun MCP](https://github.com/BlockRunAI/blockrun-mcp) (media profile).
 
 This is the **Codex port** of [`BlockRunAI/blockrun-claude-plugin`](https://github.com/BlockRunAI/blockrun-claude-plugin)
@@ -20,6 +20,12 @@ the manifests and paths are Codex-shaped.
 | Ledger reader | `lib/ledger.js` | Reads the x402 settlement ledger (no keys) |
 | `spend-insights` skill | `skills/spend-insights/` | today / 7d / 30d / all-time + projection |
 | `announce-cost` skill | `skills/announce-cost/` | Tells the agent to state the price before a paid call |
+
+## Account API setup
+
+Register at [user.blockrun.ai](https://user.blockrun.ai), create a key at [API Keys](https://user.blockrun.ai/dashboard/keys), and add [Credits](https://user.blockrun.ai/dashboard/credits). Set `BLOCKRUN_API_KEY` in the environment that launches Codex; `.mcp.json` intentionally does not contain credentials and the MCP child inherits it.
+
+Account mode needs no wallet and is supported by the MCP release containing [BlockRun MCP PR #136](https://github.com/BlockRunAI/blockrun-mcp/pull/136). Until that release is published, replace `@blockrun/mcp@latest` with its exact local review build. Wallet mode remains available on Solana or Base, with Solana first for new users. Wallet settlement meters read only x402 records; use the credits portal for authoritative account charges. The confirmation hook still shows an estimate before account calls.
 
 ## Install
 
